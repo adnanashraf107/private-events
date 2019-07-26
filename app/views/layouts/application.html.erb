@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrivateEvents</title>
+    <title>Private Events</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-top" id="home">
+      <!-- header -->
+      <div class="headder-top d-md-flex">
+        <div id="logo">
+          <h1 style="color: aliceblue">Private Events</h1>
+        </div>
+        <!-- nav -->
+        <nav class="mx-md-auto">
+          <ul class="menu mt-2">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="#about">Event</a>
+            </li>
+            
+            <li>
+              <a href="#service">Login</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+      <!-- //header -->
+      <!-- banner -->
+    <%= yield %>     
+    </div>
+    <!-- banner -->
+    <!-- footer -->
+    <footer>
+      <div class="bottom-footer text-center py-md-4 py-3">
+        <p>
+          © All Rights Reserved | DevDen
+        </p>
+      </div>
+    </footer>
+    <!-- copy right -->
   </body>
 </html>
