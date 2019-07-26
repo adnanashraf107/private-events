@@ -6,19 +6,8 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
+  ruby 2.6.3p62
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  postgresql
+* Introduction
+  This is a simple event management application. In which a user can create events, manage them after signup, and send invitations to the others. Events take place at a specific date and at a location.
