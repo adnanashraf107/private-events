@@ -1,3 +1,31 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-top {
+  background: url('background_image1.jpg') no-repeat 0px 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 800px;
+}
+.info h5 {
+  font-size: 2.5em;
+  color:#9fc2d3;
+  margin-bottom: 12px;
+}
+.info h4 {
+  color: #b5dff4;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 1px 0px 1px #7f7a7a;
+}
+.info p {
+  font-size: 15px;
+  color: #676767;
+  padding:2.5em 33em 0em 0em;
+  font-weight: 500;
+}

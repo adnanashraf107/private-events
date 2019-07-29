@@ -11,33 +11,57 @@
   </head>
 
   <body>
-    <div class="main-top" id="home">
-      <!-- header -->
-      <div class="headder-top d-md-flex">
-        <div id="logo">
-          <h1 style="color: aliceblue">Private Events</h1>
-        </div>
-        <!-- nav -->
-        <nav class="mx-md-auto">
-          <ul class="menu mt-2">
-            <li class="active">
-              <a href="index.html">Home</a>
+    <!-- nav  -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #032b41;" >
+      <a class="navbar-brand" href="#">Private Event</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <% if user_signed_in? %>
+
+            <li class="nav-item">
+              <%= link_to 'Home', user_index_path %>
             </li>
 
-            <li>
-              <a href="#about">Event</a>
+            <li class="nav-item">
+              <%= link_to 'Events' %>
             </li>
-            
-            <li>
-              <a href="#service">Login</a>
+
+            <li class="nav-item">
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
             </li>
-          </ul>
-        </nav>
-        <!-- //nav -->
+
+          <% else %>
+
+            <li class="nav-item">
+              <%= link_to 'Home', root_path %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Signup', new_user_registration_path %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Login', new_user_session_path %>
+            </li>
+
+          <% end %>
+
+        </ul>
       </div>
+    </nav>
+    <!-- //nav -->
+    <div class="main-top">
+      <!-- header -->
+      <p class="notice text-white"><%= notice %></p>
+      <p class="alert text-white"><%= alert %></p>
       <!-- //header -->
       <!-- banner -->
-    <%= yield %>     
+      <%= yield %>
     </div>
     <!-- banner -->
     <!-- footer -->

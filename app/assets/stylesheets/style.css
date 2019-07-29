@@ -141,7 +141,7 @@ nav:after {
 * and adding "position:reltive" */
 
 nav ul {
-    float: left;
+    float: none;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -454,47 +454,6 @@ background-color: #212121;
   nav ul ul ul a {
     font-size: 13px;
   }
-}
-
-/* banner */
-.main-top{position:relative;}
-.headder-top {
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-    background:#032b41;
-    padding: 1em 7em;
-    box-shadow: 1px 1px 4px #c1c1c1;
-}
-.main-top {
-    background: url('background_image1.jpg') no-repeat 0px 0px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    min-height: 800px;
-}  
-.slider-info h5 {
-    font-size: 2.5em;
-    color:#9fc2d3;
-    margin-bottom: 12px;
-}
-.slider-info {
-padding: 19em 0 0;
-}
-.slider-info h4 {
-    color: #b5dff4;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-shadow: 1px 0px 1px #7f7a7a;
-}
-.slider-info p {
-    font-size: 15px;
-    color: #676767;
-    padding:2.5em 33em 0em 0em;
-    font-weight: 500;
 }
 .outs_more-buttn a {
     font-size: 14px;
