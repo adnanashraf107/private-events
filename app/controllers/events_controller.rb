@@ -7,9 +7,8 @@ class EventsController < ApplicationController
 
   def create
     @creator = User.find(current_user.id)
-    @event = Event.new(validate_event_params)
-    @event.creator = @creator
-    if @event.save
+    @creator.events.build(validate_event_params)
+    if @creator.save
       flash.notice = 'Event created successfully.'
       redirect_to user_index_path
     else
