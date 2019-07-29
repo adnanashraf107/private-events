@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#index'
 
   resources :user
+  resources :events
 
 end
