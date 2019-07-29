@@ -1,1 +1,10 @@
-<h1 class="text-white">Welcome</h1>
+<% if @events.any? %>
+  <h1 class="text-white">All Events</h1>
+  <ul>
+    <%= @events.each do |event| %>
+      <li>event.title</li>
+    <% end %>
+  </ul>
+<% else  %>
+  <h2 class="text-white">No events found,</h2>
+<% end %>
