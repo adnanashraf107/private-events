@@ -16,6 +16,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @creator = Event.find(params[:id]).creator
+  end
+
   private
     def validate_event_params
       params.require(:event).permit(:title, :location, :date)
