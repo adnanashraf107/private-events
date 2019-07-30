@@ -5,4 +5,7 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :attendees, through: :attendances
 
+  scope :past, -> { Event.where("date < ?", Date.today) }
+  scope :upcoming, -> { Event.where("date > ?", Date.today) }
+
 end
