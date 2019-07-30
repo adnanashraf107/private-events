@@ -7,7 +7,7 @@ class UserController < ApplicationController
   end
 
   def show
-    @events = User.find(current_user.id).events
+    @events = current_user.attended_events
   end
 
 end

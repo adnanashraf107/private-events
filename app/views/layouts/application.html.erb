@@ -32,7 +32,8 @@
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
               <div class="dropdown-menu">
                 <%= link_to 'All Events', events_path %>
-                <%= link_to 'Events', new_event_path %>
+                <%= link_to 'Create', new_event_path %>
+                <%= link_to 'My Pending Events', user_path(current_user.id) %>
               </div>
             </li>
 
