@@ -1,5 +1,9 @@
 class EventsController < ApplicationController
 
+  def index
+    @events = Event.all
+  end
+
   def new
     @creator = User.find(current_user.id)
     @event = Event.new
