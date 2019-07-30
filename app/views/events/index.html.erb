@@ -13,6 +13,7 @@
               <th scope="col">Location</th>
               <th scope="col">Date</th>
               <th scope="col">View</th>
+              <th scope="col">Status</th>
             </tr>
           </thead>
 
@@ -25,6 +26,7 @@
                 <td><%= event.location %></td>
                 <td><%= event.date %></td>
                 <td><%= link_to 'Show', event_path(event.id) %></td>
+                <td><%= link_to 'Join', event_path(event.id) %></td>
               </tr>
 
             <% end %>

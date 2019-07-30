@@ -8,6 +8,10 @@
       <fieldset>
 
         <div class="form-group">
+          <%= f.text_field :name, autofocus: true, class: 'form-control input-lg', placeholder:'Full name' %>
+        </div>
+
+        <div class="form-group">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control input-lg', placeholder:'Email' %>
         </div>
 
