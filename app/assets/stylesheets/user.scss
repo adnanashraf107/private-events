@@ -29,3 +29,6 @@
   padding:2.5em 33em 0em 0em;
   font-weight: 500;
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}

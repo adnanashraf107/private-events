@@ -15,6 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
 import flatpickr from 'flatpickr';
 require('flatpickr/dist/flatpickr.css');
 
@@ -25,3 +26,5 @@ document.addEventListener('turbolinks:load', () => {
     dateFormat: 'Y-m-d',
   })
 })
+
+import './bootstrap_custom'
