@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :user
   resources :events
 
+  post 'send_invitation' => "invitations#send_invitation"
+
 end

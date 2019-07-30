@@ -26,7 +26,13 @@
                 <td><%= event.location %></td>
                 <td><%= event.date %></td>
                 <td><%= link_to 'Show', event_path(event.id) %></td>
-                <td><%= link_to 'Join', event_path(event.id) %></td>
+                <td>
+                  <%= form_tag send_invitation_path, method: :post do %>
+                    <%= hidden_field_tag 'user_id', current_user.id %>
+                    <%= hidden_field_tag 'event_id', event.id %>
+                    <%= submit_tag 'Join', data: { confirm: "Are you sure?" } %>
+                  <% end %>
+                <td/>
               </tr>
 
             <% end %>
