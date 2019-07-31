@@ -1,27 +1,38 @@
-<div class="d-flex justify-content-center">
-  <div class="info p-3 mb-2 bg-dark text-white opacity col-md-4">
+<div class="continer">
+  <%= form_for @event do |f| %>
+    <div class="row justify-content-center w-100">
 
-    <h2 class="text-white">Create Event</h2><br>
+      <div class="col-md-5">
 
-    <%= form_for @event do |f| %>
+        <h2 class="text-white">Create Event</h2><hr>
 
-        <div class="form-group">
-          <%= f.text_field :title, autofocus: true, class: 'form-control input-lg', placeholder:'Title' %>
-        </div>
+          <div class="form-group">
+            <%= f.text_field :title, autofocus: true, class: 'form-control input-lg', placeholder:'Title' %>
+          </div>
 
-        <div class="form-group">
-          <%= f.text_field :location, class: 'form-control input-lg', placeholder:'Location'  %>
-        </div>
+          <div class="form-group">
+            <%= f.text_field :location, class: 'form-control input-lg', placeholder:'Location'  %>
+          </div>
 
-        <div class="form-group">
-          <%= f.text_field :date, data: { behavior: "flatpickr"}, placeholder: 'Date' %>
-        </div>
+          <div class="form-group">
+            <%= f.text_field :date, data: { behavior: "flatpickr"}, placeholder: 'Date' %>
+          </div>
 
-        <div class="actions">
-          <%= f.submit "Create", class: "btn btn-lg btn-primary" %>
-        </div>
+          <div class="actions">
+            <%= f.submit "Create", class: "btn btn-lg btn-primary" %>
+          </div>
 
-    <% end %>
+      </div>
 
-  </div>
+      <div class="col-md-5">
+        <h2 class="text-white">Invite Users</h2><hr>
+        <% @users.each do |user| %>
+          <%= check_box_tag 'invitation_ids[]', user.id %>
+          <%= user.name %><br>
+        <% end %>
+      </div>
+
+    </div>
+  <% end %>
+
 </div>

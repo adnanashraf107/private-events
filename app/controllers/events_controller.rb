@@ -7,15 +7,22 @@ class EventsController < ApplicationController
   end
 
   def new
-    @creator = User.find(current_user.id)
+    @creator = current_user
+    @users = User.where("id != ?", current_user.id)
     @event = Event.new
   end
 
   def create
-    @creator = User.find(current_user.id)
-    @creator.events.build(validate_event_params)
+    @creator = current_user
+    invitation_ids = params[:invitation_ids]
+    event = @creator.events.build(validate_event_params)
+    debugger
     if @creator.save
       flash.notice = 'Event created successfully.'
+      invitation_ids.each do |id|
+        user = User.find(id)
+        UserMailer.join_event_mail(user, event).deliver_now
+      end
       redirect_to user_index_path
     else
       render :new

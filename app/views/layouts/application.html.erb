@@ -13,9 +13,9 @@
   <body>
 
     <!-- nav  -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #032b41;" >
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #032b41;" >
       <a class="navbar-brand" href="#">Private Event</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -29,11 +29,11 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
               <div class="dropdown-menu">
-                <%= link_to 'All Events', events_path %>
-                <%= link_to 'Create', new_event_path %>
-                <%= link_to 'My Events', user_path(current_user.id) %>
+                <%= link_to 'All Events', events_path, class: 'dropdown-item' %>
+                <%= link_to 'Create', new_event_path, class: 'dropdown-item' %>
+                <%= link_to 'My Events', user_path(current_user.id), class: 'dropdown-item' %>
               </div>
             </li>
 
